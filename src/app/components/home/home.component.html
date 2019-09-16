@@ -1,0 +1,17 @@
+<body>
+    <app-loading *ngIf="loading"></app-loading>
+    <div *ngIf="error" class="alert alert-danger animated fadeIn">
+        <h3>Error</h3>
+        <p>
+            Ops..! Something went wrong. We're trying to fix it for you.
+        </p>
+    </div>
+    <div class="titleHome">
+        <h2>New Releases</h2>
+        <hr>
+    </div>
+
+    <div>
+        <app-cards [items] = "song"></app-cards>
+    </div>
+</body>

@@ -1,0 +1,59 @@
+<div class="row animated fadeIn" *ngIf="!loadingArtist">
+    <div class="col-2">
+      <img id="artistLogo" src={{artista.images[1].url}}  class="img-thumbnail img-circle" />
+      <h3>{{ artista.name }}</h3>
+      <p>
+        <a [href]="artista.external_urls.spotify" target="_blank">
+          <button class="btn btn-outline-primary">
+            Ir a la página del artista
+          </button>
+        </a>
+      </p>
+    </div>
+
+    <div class="col-4 text-right">
+      <button routerLink="/search" class="btn btn-outline-danger">
+        Regresar
+      </button>
+    </div>
+  </div>
+  
+  <div class="row m-5">
+    <div class="table-responsive-sm">
+      <table class="table table-dark">
+        <thead>
+          <tr>
+            <th>Foto</th>
+            <th>Album</th>
+            <th>Canción</th>
+            <th>Vista Previa</th>
+            <th>Favorito</th>
+          </tr>
+        </thead>
+  
+        <tbody>
+          <tr *ngFor="let track of topTracks">
+            <td id="imgFav">
+              <img src={{track.album.images[2].url}} class="img-thumb" />
+            </td>
+            <td id="albumFav">{{ track.album.name }}</td>
+            <td id="trackFav">{{ track.name }}</td>
+            <td id="previewFav">
+              <iframe
+                [src]="track.uri | domseguro"
+                width="290"
+                height="90"
+                frameborder="0"
+                allowtransparency="true"
+                allow="encrypted-media"
+              ></iframe>
+            </td>
+            <td>
+                <button type="button" ng-click="saveFavorite();">Favorite</button>
+            </td>
+            </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
