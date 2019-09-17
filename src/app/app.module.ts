@@ -9,7 +9,6 @@ import { ArtistaComponent } from './components/artists/artists.component';
 import { CardsComponent } from './components/cards/cards.component';
 import { FavoritesComponent } from './components/favorites/favorites.component';
 import { LoadingComponent } from './components/loading/loading.component';
-import { SearchComponent } from './components/search/search.component';
 import { NoimagePipe } from './pipes/noimage.pipe';
 import { DomseguroPipe } from './pipes/domseguro.pipe';
 
@@ -22,9 +21,8 @@ import { DomseguroPipe } from './pipes/domseguro.pipe';
     ArtistaComponent,
     CardsComponent,
     LoadingComponent,
-    SearchComponent,
     NoimagePipe,
-    DomseguroPipe
+    DomseguroPipe,
   ],
   imports: [
     BrowserModule,

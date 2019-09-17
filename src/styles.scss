@@ -1,10 +1,11 @@
 $fontFamily: Arial, Helvetica, sans-serif;
 $marginZero: 0;
-$borderFrames: 1px solid;
+$borderFrames: 1px solid black;
 $display: flex;
+$fontColorBlack: black;
 
 body{
-    background-image: url('https://static.vecteezy.com/system/resources/previews/000/115/554/original/free-vector-polygon-degraded-background.jpg')
+    background-color: whitesmoke;
 }
 
 iframe{
@@ -14,15 +15,17 @@ iframe{
 }
 
 th{
-    background-color: black;
-    margin: $marginZero;
+    background-color: $fontColorBlack;
+    margin: 10px;
     padding: 0;
     font-family: $fontFamily;
+    text-align: center;
 }
 
 #artistLogo{
     border-radius: 50%;
-    width: 90px; 
+    min-width: 90px;
+    max-width: 90px; 
     height: 90px;
     display: flex;
 }
@@ -40,10 +43,35 @@ hr{
     margin: 10px;
     padding: 15px;
     width: 280px;
-    height: 380px;
+    height: 280pxpx;
     border: $borderFrames;
     border-radius: 10px;
 }
 
-  
-  
+.artistName{
+    color: $fontColorBlack;
+    font-family: $fontFamily;
+}
+
+#albumFav{
+    text-align: center;
+}
+
+#trackFav{
+    text-align: center;
+}
+
+.table{
+    width: 100%;
+}
+
+.titleHome{
+    font-family: $fontFamily;
+    color:$fontColorBlack;
+    margin: $marginZero;
+    padding: 10px;
+}
+
+input{
+    background-color: lightgrey;
+}

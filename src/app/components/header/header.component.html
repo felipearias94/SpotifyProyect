@@ -14,11 +14,17 @@
         <a class="nav-link" routerLink='home'>Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
-        <a class="nav-link" routerLink='search'>Search</a>
-      </li>
-      <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
         <a class="nav-link" routerLink='favorites'>Favorites</a>
       </li>
     </ul>
   </div>
 </nav>
+
+<div class="row">
+  <div class="col">
+      <input #termino type="text" (keyup)="buscar(termino.value)" class="form-control" placeholder="Search Artists, Albums or Songs...">
+  </div>
+</div>
+
+<app-loading class="m-5" *ngIf="loading"></app-loading>
+<app-cards *ngIf="!loading" [items]="artistas"></app-cards>

@@ -25,7 +25,7 @@ export class HomeComponent implements OnInit{
     this.loading = true;
     this.error = false;
     this.login();
-    this.spotify.getNewReleases()
+    /*this.spotify.getNewReleases()
         .subscribe( (data: any) => {
 
           console.log(data);
@@ -38,7 +38,7 @@ export class HomeComponent implements OnInit{
           console.log(errorServicio);
           this.messageError = errorServicio.error.error.message;
 
-        });
+        });*/
   }
   
   login() {

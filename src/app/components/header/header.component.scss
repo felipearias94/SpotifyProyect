@@ -1,7 +1,7 @@
 @import '../../../styles.scss';
 
 #logo{
-    margin: 0px;
+    margin: $marginZero;
     padding: 0px;
     display: flex;
     width: 89px; height: 27px;
@@ -18,3 +18,8 @@
   .content{
     height: 200vh;
   }
+
+  .col{
+    margin: 15px;
+    padding: 30px;
+}
