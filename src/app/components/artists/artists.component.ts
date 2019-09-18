@@ -13,6 +13,7 @@ export class ArtistaComponent {
 
   artista: any = [];
   topTracks: any[] = [];
+  songsFav: string[] = [];
 
   loadingArtist: boolean;
 
@@ -50,15 +51,19 @@ export class ArtistaComponent {
             });
   }
 
-  saveFavorite(){
-    let imgFav = document.getElementById("imgFav");
-    let albumFav = document.getElementById("albumFav");
-    let trackFav = document.getElementById("trackFav");
-    const previewFav = document.getElementById("previewFav");
 
-    let objFavorites = {imgFav, albumFav, trackFav, previewFav}
-    let myJSON = JSON.stringify(objFavorites)
-    localStorage.setItem('song',myJSON)
-  }
+  saveFavorite(obj:any){    
+    let imgFav = obj.album.images[2].url;
+    let albumFav = obj.album.name;
+    let trackFav = obj.name;
+    const previewFav = obj.preview_url;
+    console.log(obj);
 
+    let objFavorites = {imgFav, albumFav, trackFav, previewFav};
+    let myJSON = JSON.stringify(objFavorites);
+    
+    this.songsFav.push(myJSON);
+    let x = this.songsFav.toString();
+    localStorage.setItem('favSong',x);
+  };
 }

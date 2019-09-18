@@ -11,6 +11,7 @@ import { FavoritesComponent } from './components/favorites/favorites.component';
 import { LoadingComponent } from './components/loading/loading.component';
 import { NoimagePipe } from './pipes/noimage.pipe';
 import { DomseguroPipe } from './pipes/domseguro.pipe';
+import { AlbumComponent } from './components/album/album.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { DomseguroPipe } from './pipes/domseguro.pipe';
     LoadingComponent,
     NoimagePipe,
     DomseguroPipe,
+    AlbumComponent,
   ],
   imports: [
     BrowserModule,

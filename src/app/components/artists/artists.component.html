@@ -5,7 +5,7 @@
       <p>
         <a [href]="artista.external_urls.spotify" target="_blank">
           <button class="btn btn-outline-primary">
-            Go to artist webpage
+            Go to artist's Spotify profile
           </button>
         </a>
       </p>
@@ -37,9 +37,9 @@
             <td id="imgFav">
               <img src={{track.album.images[2].url}} class="img-thumb" />
             </td>
-            <td id="albumFav">{{ track.album.name }}</td>
+            <td id="albumFav"><a routerLink="/album" >{{ track.album.name }}</a></td> 
             <td id="trackFav">{{ track.name }}</td>
-            <td>{{track.duration_ms | date: 'mm:ss' }} </td>
+            <td>{{track.duration_ms | date: 'mm:ss' }} </td>     
             <td id="previewFav">
               <iframe
                 [src]="track.uri | domseguro"
@@ -51,7 +51,7 @@
               ></iframe>
             </td>
             <td>
-                <button type="button" (onclick)="saveFavorite();">Favorite</button>
+                <button type="button" (click)="saveFavorite(track);" >Fav</button>
             </td>
             </tr>
         </tbody>

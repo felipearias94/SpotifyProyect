@@ -27,7 +27,11 @@ th{
     min-width: 90px;
     max-width: 90px; 
     height: 90px;
-    display: flex;
+    
+}
+
+.row{
+    text-align: center;
 }
 
 hr{
@@ -75,3 +79,4 @@ hr{
 input{
     background-color: lightgrey;
 }
+

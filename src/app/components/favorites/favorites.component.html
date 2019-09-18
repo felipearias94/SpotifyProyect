@@ -10,7 +10,16 @@
                 <th>Duration</th>
                 <th>Preview</th>
             </thead>
+
+            <tbody>
+                <tr *ngFor="let song of favSongs">
+                    <td><img src={{song.imgFav}} alt=""></td>
+                    <td><a routerLink="/album">{{song.albumFav}}</a></td>
+                    <td>{{song.trackFav}}</td>
+                    <td>{{song.previewFav}}</td>
+
+                </tr>
+            </tbody>
         </table>
     </div>
-    <p>Mark as favorite some tracks!!</p>
 </div>
