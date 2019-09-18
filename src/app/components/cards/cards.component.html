@@ -1,7 +1,7 @@
 <div class="card-columns m-5 animated fadeIn">
     <div (click)="verArtista( item )" *ngFor="let item of items" class="panel">
         <div>
-            <img class="albumImage" src={{item.images[0].url}}  alt="Card image">
+            <img class="albumImage" src= {{item.images[0].url}}   alt="Card image">
             <div>
                 <h5 class="artistName">{{ item.name }}</h5>
                 <p>

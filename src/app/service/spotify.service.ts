@@ -62,7 +62,10 @@ export class SpotifyService {
       map(data => data["tracks"])
     );
   }
-
-  
+ /*
+  getFavorites(){
+    let arrayStorage = localStorage.getItem('favSong');
+    return this.array.push(arrayStorage);
+  }*/
 }
 
