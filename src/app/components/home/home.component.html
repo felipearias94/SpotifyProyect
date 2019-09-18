@@ -1,0 +1,12 @@
+<body>
+    <app-loading *ngIf="loading"></app-loading>
+    <div *ngIf="error" class="alert alert-danger animated fadeIn">
+        <h3>Error</h3>
+        <p>
+            Ops..! Something went wrong. We're trying to fix it for you.
+        </p>
+    </div>
+    <div>
+        <app-favorites></app-favorites>
+    </div>      
+</body>

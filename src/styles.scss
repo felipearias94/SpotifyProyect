@@ -1,0 +1,77 @@
+$fontFamily: Arial, Helvetica, sans-serif;
+$marginZero: 0;
+$borderFrames: 1px solid black;
+$display: flex;
+$fontColorBlack: black;
+
+body{
+    background-color: whitesmoke;
+}
+
+iframe{
+    margin: $marginZero;
+    padding: 5px;
+    width: 250px; height: 90px;
+}
+
+th{
+    background-color: $fontColorBlack;
+    margin: 10px;
+    padding: 0;
+    font-family: $fontFamily;
+    text-align: center;
+}
+
+#artistLogo{
+    border-radius: 50%;
+    min-width: 90px;
+    max-width: 90px; 
+    height: 90px;
+    display: flex;
+}
+
+hr{
+    border: $borderFrames;
+}
+
+.albumImage{
+    width: 220px; height: 220px;
+}
+
+.panel{
+    display: $display;
+    margin: 10px;
+    padding: 15px;
+    width: 280px;
+    height: 280pxpx;
+    border: $borderFrames;
+    border-radius: 10px;
+}
+
+.artistName{
+    color: $fontColorBlack;
+    font-family: $fontFamily;
+}
+
+#albumFav{
+    text-align: center;
+}
+
+#trackFav{
+    text-align: center;
+}
+
+.table{
+    width: 100%;
+}
+
+.titleHome{
+    font-family: $fontFamily;
+    color:$fontColorBlack;
+    margin: $marginZero;
+    padding: 10px;
+}
+
+input{
+    background-color: lightgrey;
+}

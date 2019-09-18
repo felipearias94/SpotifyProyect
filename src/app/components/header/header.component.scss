@@ -1,0 +1,25 @@
+@import '../../../styles.scss';
+
+#logo{
+    margin: $marginZero;
+    padding: 0px;
+    display: flex;
+    width: 89px; height: 27px;
+}
+
+.sticky{
+    position: fixed;
+    top: 0;
+    overflow: hidden;
+    z-index: 10;
+    width: 100%;
+  }
+  
+  .content{
+    height: 200vh;
+  }
+
+  .col{
+    margin: 15px;
+    padding: 30px;
+}
